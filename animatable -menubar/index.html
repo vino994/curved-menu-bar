@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatable-Menubar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <h1>OnlineCoders</h1>
+            <ul>
+                <li class="list active"><a href="">Home</a></li>
+                <li class="list"><a href="">About</a></li>
+                <li class="list"><a href="">Profile</a></li>
+                <li class="list"><a href="">Gallery</a></li>
+                <li class="list"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <p>Other Section of Our Webpage Go here.....</p>
+    </section>
+    <script>
+        var li= document.querySelectorAll('li');
+
+        li.forEach((list)=>{
+            list.addEventListener('click',(e)=>{
+                e.preventDefault();
+                li.forEach((other)=>{
+                    other.classList.remove('active')
+                })
+                list.classList.add('active')
+            })
+        })
+    </script>
+</body>
+</html>
